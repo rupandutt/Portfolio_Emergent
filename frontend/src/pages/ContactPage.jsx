@@ -354,16 +354,30 @@ const ContactPage = () => {
                         name="message"
                         value={formData.message}
                         onChange={handleInputChange}
+                        onBlur={handleBlur}
                         required
                         rows="6"
-                        className="w-full px-4 py-3 rounded-lg border transition-colors resize-vertical"
+                        className={`w-full px-4 py-3 rounded-lg border transition-colors resize-vertical ${
+                          errors.message ? 'border-red-500' : 'border-border-primary'
+                        }`}
                         style={{
                           backgroundColor: 'var(--bg-tertiary)',
-                          borderColor: 'var(--border-primary)',
+                          borderColor: errors.message ? '#ef4444' : 'var(--border-primary)',
                           color: 'var(--text-primary)'
                         }}
                         placeholder="Tell me about your project requirements, timeline, and any specific challenges you're facing..."
                       />
+                      {errors.message && (
+                        <div className="flex items-center space-x-2 mt-1">
+                          <AlertCircle size={14} className="text-red-500" />
+                          <span className="text-sm text-red-500">{errors.message}</span>
+                        </div>
+                      )}
+                      <div className="flex justify-between items-center mt-2">
+                        <span className="text-sm" style={{ color: 'var(--text-muted)' }}>
+                          {formData.message.length}/500 characters
+                        </span>
+                      </div>
                     </div>
 
                     <button type="submit" className="btn-primary w-full">
