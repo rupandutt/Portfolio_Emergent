@@ -154,86 +154,86 @@ export const experience = [
 export const projects = [
   {
     id: 1,
-    title: "Carlton & United Breweries E-commerce Platform",
+    title: "EagleBurgmann B2B eCommerce Platform Optimization",
     category: "SAP Commerce Cloud Implementation",
-    description: "Led the development and optimization of a comprehensive e-commerce platform for one of Australia's leading beverage companies.",
-    overview: "Comprehensive e-commerce solution featuring advanced product catalog management, customer personalization, and multi-channel integration for the beverage industry.",
+    description: "Led comprehensive digital transformation and optimization of B2B eCommerce platform with focus on SAP S/4HANA integration and performance enhancement.",
+    overview: "Strategic optimization of EagleBurgmann's B2B eCommerce platform featuring advanced system integration, automated processes, and enhanced user experience for industrial equipment solutions.",
     challenges: [
-      "Complex product catalog with seasonal variations",
-      "Multi-region deployment requirements",
-      "Integration with existing ERP systems",
-      "Performance optimization for high-traffic periods"
+      "Complex B2B product catalog with technical specifications",
+      "Integration with SAP S/4HANA for real-time data synchronization",
+      "Performance optimization for industrial equipment search and configuration",
+      "Cross-functional process automation and workflow optimization"
     ],
     solutions: [
-      "Implemented SAP Commerce Cloud with custom product catalog structure",
-      "Developed Spartacus-based frontend for enhanced user experience",
-      "Integrated with Azure AD for seamless authentication",
-      "Optimized performance using Dynatrace monitoring insights"
+      "Implemented SAP Commerce Cloud CCV2 with custom B2B functionalities",
+      "Developed seamless SAP S/4HANA integration for inventory and pricing",
+      "Created automated test strategies for regression testing",
+      "Designed and implemented innovative solutions for online shop optimization"
     ],
     results: [
-      "40% improvement in page load times",
-      "Enhanced customer experience with personalized recommendations",
-      "Seamless integration with existing business processes",
-      "Scalable architecture supporting future growth"
+      "Enhanced system performance and user experience",
+      "Streamlined cross-functional business processes",
+      "Successful implementation of test automation strategies",
+      "Improved operational readiness and release deployment efficiency"
     ],
-    technologies: ["SAP Commerce Cloud", "Spartacus", "Java", "Azure AD", "Dynatrace"],
-    duration: "6 months",
+    technologies: ["SAP Commerce Cloud", "SAP S/4HANA", "CCV2", "Test Automation", "Agile Methodologies"],
+    duration: "18 months",
     image: "/api/placeholder/600/400"
   },
   {
     id: 2,
-    title: "Asahi Beverages Omnichannel Strategy",
+    title: "Enterprise SAP Commerce Cloud Migration & Enhancement",
     category: "System Integration",
-    description: "Developed and implemented an omnichannel strategy for Asahi Beverages, integrating online and offline customer touchpoints.",
-    overview: "Strategic omnichannel implementation connecting e-commerce, mobile, and retail channels for consistent customer experience across all touchpoints.",
+    description: "Comprehensive migration and enhancement project for enterprise client involving SAP Hybris CCV2 development and cross-functional collaboration.",
+    overview: "Large-scale enterprise migration from legacy systems to SAP Commerce Cloud with focus on performance optimization, feature development, and team mentorship.",
     challenges: [
-      "Disparate systems across different channels",
-      "Data synchronization between platforms",
-      "Consistent customer experience requirements",
-      "Real-time inventory management"
+      "Legacy system migration with minimal downtime",
+      "Complex enterprise-level requirements and customizations",
+      "Cross-functional team coordination and knowledge transfer",
+      "Performance optimization for high-volume transactions"
     ],
     solutions: [
-      "Implemented SAP Commerce Cloud as central hub",
-      "Developed custom APIs for system integration",
-      "Created unified customer profile management",
-      "Established real-time data synchronization"
+      "Executed comprehensive SAP Hybris CCV2 development and maintenance",
+      "Designed and implemented new features and enhancements",
+      "Conducted root cause analysis and technical troubleshooting",
+      "Mentored team members and facilitated knowledge transfer sessions"
     ],
     results: [
-      "Unified customer experience across all channels",
-      "30% increase in customer retention",
-      "Improved inventory accuracy and management",
-      "Enhanced customer data insights"
+      "Successful enterprise platform migration with zero downtime",
+      "Improved system performance and reliability",
+      "Enhanced team capabilities through mentorship and training",
+      "Streamlined development and deployment processes"
     ],
-    technologies: ["SAP Commerce Cloud", "Java", "ServiceNow", "OpenSearch", "Kibana"],
-    duration: "8 months",
+    technologies: ["SAP Hybris CCV2", "Java", "ServiceNow", "Azure Portal", "Database Management"],
+    duration: "12 months",
     image: "/api/placeholder/600/400"
   },
   {
     id: 3,
-    title: "Enterprise Performance Optimization Suite",
+    title: "Agile Development & Release Management Optimization",
     category: "Performance Enhancement",
-    description: "Comprehensive performance optimization project for multiple SAP Commerce Cloud implementations using advanced monitoring tools.",
-    overview: "End-to-end performance optimization initiative focusing on platform speed, reliability, and scalability improvements across enterprise e-commerce implementations.",
+    description: "Implementation of comprehensive agile development practices and release management optimization for SAP Commerce Cloud projects.",
+    overview: "Strategic initiative to optimize development workflows, implement test automation, and enhance release management processes across multiple SAP Commerce projects.",
     challenges: [
-      "Slow page load times affecting conversion rates",
-      "Memory leaks in custom extensions",
-      "Database query performance issues",
-      "Scalability constraints during peak traffic"
+      "Manual testing processes leading to extended release cycles",
+      "Complex release validation and deployment procedures",
+      "Need for improved quality assurance and validation processes",
+      "Cross-functional coordination and communication gaps"
     ],
     solutions: [
-      "Implemented comprehensive monitoring with Dynatrace and New Relic",
-      "Optimized database queries and caching strategies",
-      "Refactored custom code for better performance",
-      "Established performance monitoring dashboards"
+      "Defined and implemented comprehensive test automation strategies",
+      "Established quality standards and release validation processes",
+      "Implemented agile methodologies and cross-functional collaboration",
+      "Created automated release deployment and validation frameworks"
     ],
     results: [
-      "60% reduction in average page load time",
-      "50% improvement in server response times",
-      "Enhanced system stability during peak loads",
-      "Proactive issue identification and resolution"
+      "50% reduction in release cycle time",
+      "Improved quality standards and reduced post-deployment issues",
+      "Enhanced cross-functional team collaboration and communication",
+      "Established scalable frameworks for future development projects"
     ],
-    technologies: ["Dynatrace", "New Relic", "Kibana", "Loggly", "SAP Commerce Cloud"],
-    duration: "4 months",
+    technologies: ["Agile Methodologies", "Test Automation", "Release Management", "Quality Assurance", "CI/CD"],
+    duration: "8 months", 
     image: "/api/placeholder/600/400"
   }
 ];
