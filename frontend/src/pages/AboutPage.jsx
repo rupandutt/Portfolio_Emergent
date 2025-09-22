@@ -348,6 +348,7 @@ const AboutPage = () => {
         </div>
       </section>
 
+      <BackToTop />
       <Footer />
     </div>
   );
