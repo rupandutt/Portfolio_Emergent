@@ -33,6 +33,9 @@ api_router = APIRouter(prefix="/api")
 # Rate limiting storage
 rate_limit_storage = defaultdict(list)
 
+# Email service instance
+email_service = EmailService()
+
 # Define Models
 class ContactFormRequest(BaseModel):
     name: str = Field(..., min_length=2, max_length=100)
