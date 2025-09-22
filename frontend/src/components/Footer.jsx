@@ -10,13 +10,13 @@ const Footer = () => {
       { name: 'Home', href: '/' },
       { name: 'About', href: '/about' },
       { name: 'Projects', href: '/projects' },
-      { name: 'Services', href: '/services' },
+      { name: 'Contact', href: '/contact' },
     ],
-    services: [
-      { name: 'SAP Commerce Consulting', href: '/services' },
-      { name: 'System Integration', href: '/services' },
-      { name: 'Performance Optimization', href: '/services' },
-      { name: 'Technical Support', href: '/services' },
+    expertise: [
+      { name: 'SAP Commerce Cloud Management', href: '/projects' },
+      { name: 'Product Owner & Agile Leadership', href: '/projects' },
+      { name: 'Application Lifecycle Management', href: '/projects' },
+      { name: 'Cross-functional Team Coordination', href: '/projects' },
     ],
     contact: [
       { name: 'duttard27@gmail.com', href: 'mailto:duttard27@gmail.com', icon: Mail },
