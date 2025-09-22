@@ -72,15 +72,15 @@ const HomePage = () => {
             </div>
             <div className="text-center feature-card">
               <div className="text-3xl font-bold mb-2" style={{ color: 'var(--accent-primary)' }}>
-                15+
+                20+
               </div>
               <p className="body-md">Technologies Mastered</p>
             </div>
             <div className="text-center feature-card">
               <div className="text-3xl font-bold mb-2" style={{ color: 'var(--accent-primary)' }}>
-                5+
+                2
               </div>
-              <p className="body-md">Major Projects Delivered</p>
+              <p className="body-md">Industry Awards Received</p>
             </div>
           </div>
         </div>
