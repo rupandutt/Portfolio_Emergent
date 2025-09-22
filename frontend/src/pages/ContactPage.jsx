@@ -222,15 +222,24 @@ const ContactPage = () => {
                           name="name"
                           value={formData.name}
                           onChange={handleInputChange}
+                          onBlur={handleBlur}
                           required
-                          className="w-full px-4 py-3 rounded-lg border transition-colors"
+                          className={`w-full px-4 py-3 rounded-lg border transition-colors ${
+                            errors.name ? 'border-red-500' : 'border-border-primary'
+                          }`}
                           style={{
                             backgroundColor: 'var(--bg-tertiary)',
-                            borderColor: 'var(--border-primary)',
+                            borderColor: errors.name ? '#ef4444' : 'var(--border-primary)',
                             color: 'var(--text-primary)'
                           }}
                           placeholder="Your full name"
                         />
+                        {errors.name && (
+                          <div className="flex items-center space-x-2 mt-1">
+                            <AlertCircle size={14} className="text-red-500" />
+                            <span className="text-sm text-red-500">{errors.name}</span>
+                          </div>
+                        )}
                       </div>
                       
                       <div>
