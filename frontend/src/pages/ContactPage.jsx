@@ -9,6 +9,8 @@ import { useToast } from '../hooks/use-toast';
 
 const ContactPage = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,32 +20,129 @@ const ContactPage = () => {
     projectType: 'consulting'
   });
 
+  const validateField = (name, value) => {
+    const newErrors = { ...errors };
+
+    switch (name) {
+      case 'name':
+        if (!value.trim()) {
+          newErrors.name = 'Name is required';
+        } else if (value.trim().length < 2) {
+          newErrors.name = 'Name must be at least 2 characters';
+        } else {
+          delete newErrors.name;
+        }
+        break;
+
+      case 'email':
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!value.trim()) {
+          newErrors.email = 'Email is required';
+        } else if (!emailRegex.test(value)) {
+          newErrors.email = 'Please enter a valid email address';
+        } else {
+          delete newErrors.email;
+        }
+        break;
+
+      case 'subject':
+        if (!value.trim()) {
+          newErrors.subject = 'Subject is required';
+        } else if (value.trim().length < 5) {
+          newErrors.subject = 'Subject must be at least 5 characters';
+        } else {
+          delete newErrors.subject;
+        }
+        break;
+
+      case 'message':
+        if (!value.trim()) {
+          newErrors.message = 'Message is required';
+        } else if (value.trim().length < 20) {
+          newErrors.message = 'Message must be at least 20 characters';
+        } else {
+          delete newErrors.message;
+        }
+        break;
+
+      default:
+        break;
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
+
+    // Real-time validation
+    if (errors[name]) {
+      validateField(name, value);
+    }
   };
 
-  const handleSubmit = (e) => {
+  const handleBlur = (e) => {
+    const { name, value } = e.target;
+    validateField(name, value);
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Mock form submission
-    toast({
-      title: "Message sent successfully!",
-      description: "I'll get back to you within 24 hours.",
+    setIsSubmitting(true);
+
+    // Validate all fields
+    const fieldsToValidate = ['name', 'email', 'subject', 'message'];
+    let isValid = true;
+
+    fieldsToValidate.forEach(field => {
+      if (!validateField(field, formData[field])) {
+        isValid = false;
+      }
     });
 
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      subject: '',
-      message: '',
-      projectType: 'consulting'
-    });
+    if (!isValid) {
+      setIsSubmitting(false);
+      toast({
+        title: "Validation Error",
+        description: "Please fix the errors in the form before submitting.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      toast({
+        title: "Message sent successfully!",
+        description: "I'll get back to you within 24 hours.",
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        subject: '',
+        message: '',
+        projectType: 'consulting'
+      });
+      setErrors({});
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Please try again later or contact me directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
