@@ -1,19 +1,20 @@
-// Mock data for portfolio website
+// Updated data from CV for portfolio website
 export const personalInfo = {
   name: "Rupan Dutta",
-  title: "Senior SAP Commerce Cloud Consultant",
-  tagline: "Transforming E-commerce Experiences with SAP Commerce Cloud Expertise",
-  email: "rupan.dutta@email.com",
-  phone: "+91 XXXXX XXXXX",
+  title: "IT Service Manager",
+  tagline: "Certified SAP Commerce Consultant & Digital Innovation Specialist",
+  email: "duttard27@gmail.com",
+  phone: "(+91) 8617595261",
   linkedin: "https://www.linkedin.com/in/rupan-dutta-335615185",
   github: "https://github.com/rupandutta",
-  location: "India",
-  experience: "2.5+ years",
-  bio: `Senior Analyst/Software Engineer specializing in SAP Commerce Cloud (Hybris CCV2) with over 2.5 years of experience in e-commerce platforms and omnichannel strategies. Passionate about delivering scalable, optimized eCommerce solutions for global clients.
+  location: "Chennai, India",
+  experience: "4.8+ years",
+  profileImage: "https://customer-assets.emergentagent.com/job_tech-portfolio-170/artifacts/ihounuhx_IMG_6056.jpeg",
+  bio: `As a Certified SAP Commerce Consultant at EagleBurgmann, I specialize in building and optimizing robust B2B eCommerce solutions. My focus is on enhancing system performance, automating key processes, and ensuring seamless cross-functional integration with platforms like SAP S/4HANA.
 
-With expertise in Java development and hands-on experience with enterprise-grade tools, I help businesses transform their digital commerce capabilities. My experience spans across major beverage industry clients including Carlton & United Breweries and Asahi Beverages.
+With hands-on experience in SAP Commerce Cloud (CCV2) and Spartacus, I enjoy solving complex technical challenges and collaborating with global teams to deliver tangible business value. I am passionate about creating efficient, scalable systems that drive digital growth.
 
-I hold multiple SAP certifications and stay current with the latest developments in SAP Commerce Cloud, Spartacus framework, and modern e-commerce technologies.`
+Currently serving as IT Service Manager, I provide technical liaison, support, and strategic guidance while promoting understanding of complex business processes and data structures.`
 };
 
 export const skills = {
