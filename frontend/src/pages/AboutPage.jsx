@@ -57,6 +57,9 @@ const AboutPage = () => {
                   </div>
                 </div>
               </div>
+              
+              {/* Availability Status */}
+              <AvailabilityStatus />
             </div>
           </div>
         </div>
