@@ -151,45 +151,12 @@ async def submit_contact_form(form_data: ContactFormRequest, request: Request):
         # Save to database
         await db.contact_submissions.insert_one(submission)
         
-        # Send admin notification email
-        admin_subject = f"New Portfolio Contact: {form_data.subject}"
-        admin_body = f"""
-        New contact form submission:
-        
-        Name: {form_data.name}
-        Email: {form_data.email}
-        Company: {form_data.company or 'Not provided'}
-        Project Type: {form_data.projectType}
-        Subject: {form_data.subject}
-        
-        Message:
-        {form_data.message}
-        
-        Submitted at: {datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')}
-        IP Address: {request.client.host}
-        """
-        
-        # Send auto-response email
-        auto_response_subject = "Thank you for contacting Rupan Dutta"
-        auto_response_body = f"""
-        Dear {form_data.name},
-        
-        Thank you for reaching out! I have received your message regarding "{form_data.subject}" and will get back to you within 24 hours.
-        
-        Your message:
-        {form_data.message}
-        
-        Best regards,
-        Rupan Dutta
-        IT Service Manager & Technical Product Owner
-        """
-        
-        # Send emails (in background)
-        email_sent = await send_email("duttard27@gmail.com", admin_subject, admin_body)
-        await send_email(form_data.email, auto_response_subject, auto_response_body)
+        # Send emails using the email service
+        notification_sent = await email_service.send_notification_email(form_data.dict(), request.client.host)
+        auto_response_sent = await email_service.send_auto_response(form_data.dict())
         
         # Update email sent status
-        if email_sent:
+        if notification_sent:
             await db.contact_submissions.update_one(
                 {"_id": submission_id},
                 {"$set": {"emailSent": True}}
