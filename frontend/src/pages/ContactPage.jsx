@@ -475,7 +475,7 @@ const ContactPage = () => {
                           href={social.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-12 h-12 rounded-lg flex items-center justify-center transition-colors"
+                          className="social-link w-12 h-12 rounded-lg flex items-center justify-center"
                           style={{ backgroundColor: 'var(--bg-tertiary)' }}
                         >
                           <IconComponent size={20} style={{ color: 'var(--text-muted)' }} />
