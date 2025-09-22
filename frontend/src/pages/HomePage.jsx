@@ -193,10 +193,10 @@ const HomePage = () => {
           </div>
           
           <div className="card-grid max-w-6xl mx-auto">
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="feature-card">
+            {recommendations.map((recommendation) => (
+              <div key={recommendation.id} className="feature-card">
                 <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, index) => (
+                  {[...Array(5)].map((_, index) => (
                     <Star 
                       key={index} 
                       size={20} 
@@ -206,14 +206,14 @@ const HomePage = () => {
                   ))}
                 </div>
                 <p className="body-md mb-6 italic">
-                  "{testimonial.content}"
+                  "{recommendation.content}"
                 </p>
                 <div>
                   <p className="font-semibold" style={{ color: 'var(--text-primary)' }}>
-                    {testimonial.name}
+                    {recommendation.name}
                   </p>
                   <p className="body-sm">
-                    {testimonial.position} at {testimonial.company}
+                    {recommendation.position} at {recommendation.company}
                   </p>
                 </div>
               </div>
