@@ -317,29 +317,74 @@ export const services = [
   }
 ];
 
-export const testimonials = [
+export const education = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    position: "IT Director",
-    company: "Carlton & United Breweries",
-    content: "Rupan's expertise in SAP Commerce Cloud transformed our e-commerce platform. His attention to detail and deep technical knowledge resulted in a 40% improvement in performance.",
-    rating: 5
+    degree: "Bachelor of Technology",
+    field: "Computer Science Engineering",
+    institution: "Academy of Technology (MAKAUT)",
+    location: "Adisaptagram, India",
+    duration: "2016 - 2020",
+    grade: "7.56 CGPA"
   },
   {
     id: 2,
-    name: "Michael Chen",
-    position: "Digital Operations Manager",
-    company: "Asahi Beverages",
-    content: "Working with Rupan on our omnichannel strategy was exceptional. He delivered a seamless integration that significantly improved our customer experience across all touchpoints.",
-    rating: 5
+    degree: "Higher Secondary Education",
+    institution: "DAV Model School, IIT Kharagpur (CBSE)",
+    location: "Kharagpur, India", 
+    duration: "2015 - 2016",
+    grade: "82.8%"
   },
   {
     id: 3,
-    name: "Emma Williams",
-    position: "E-commerce Director",
-    company: "Enterprise Client",
-    content: "Rupan's performance optimization work was outstanding. He identified and resolved critical bottlenecks, resulting in faster load times and improved customer satisfaction.",
-    rating: 5
+    degree: "Secondary Education",
+    institution: "DAV Model School, IIT Kharagpur (CBSE)",
+    location: "Kharagpur, India",
+    duration: "2013 - 2014", 
+    grade: "CGPA 9.8"
+  }
+];
+
+export const honorsAwards = [
+  {
+    id: 1,
+    title: "ECommerce Operations and Solution Delivery Award",
+    organization: "EagleBurgmann",
+    date: "March 2025",
+    description: "Recognized for outstanding contributions to eCommerce operations and innovative solution delivery in SAP Commerce implementations."
+  },
+  {
+    id: 2,
+    title: "Value Creator Award", 
+    organization: "Capgemini",
+    date: "March 2022",
+    description: "Awarded for exceptional value creation and innovative problem-solving in SAP Commerce Cloud projects."
+  }
+];
+
+export const recommendations = [
+  {
+    id: 1,
+    name: "Vanessa Siemon",
+    position: "Solution Architect SAP Commerce",
+    company: "Klueber GmbH",
+    content: "Rupan consistently demonstrates exceptional technical skills and problem-solving abilities in SAP Commerce Cloud implementations. His analytical thinking and collaborative approach make him a valuable team member who delivers high-quality results.",
+    date: "2024"
+  },
+  {
+    id: 2,
+    name: "Ravi Iyer", 
+    position: "Associate Director",
+    company: "Capgemini Australia",
+    content: "Working with Rupan has been a pleasure. His deep understanding of SAP Commerce Cloud, combined with his excellent communication skills and adaptability, makes him stand out as a professional. He consistently delivers beyond expectations.",
+    date: "2023"
+  },
+  {
+    id: 3,
+    name: "Sudeep Bansal",
+    position: "Senior IT Engineer", 
+    company: "Honeywell",
+    content: "Rupan's leadership qualities and technical ownership in SAP Commerce projects are commendable. His ability to collaborate effectively with stakeholders while maintaining high standards of quality makes him an asset to any organization.",
+    date: "2023"
   }
 ];
