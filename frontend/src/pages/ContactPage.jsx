@@ -477,14 +477,6 @@ const ContactPage = () => {
                           rel="noopener noreferrer"
                           className="w-12 h-12 rounded-lg flex items-center justify-center transition-colors"
                           style={{ backgroundColor: 'var(--bg-tertiary)' }}
-                          onMouseEnter={(e) => {
-                            e.target.style.backgroundColor = 'var(--accent-primary)';
-                            e.target.querySelector('svg').style.color = 'var(--bg-primary)';
-                          }}
-                          onMouseLeave={(e) => {
-                            e.target.style.backgroundColor = 'var(--bg-tertiary)';
-                            e.target.querySelector('svg').style.color = 'var(--text-muted)';
-                          }}
                         >
                           <IconComponent size={20} style={{ color: 'var(--text-muted)' }} />
                         </a>
