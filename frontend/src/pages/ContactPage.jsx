@@ -116,12 +116,27 @@ const ContactPage = () => {
     }
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Submit to backend API
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        if (response.status === 429) {
+          throw new Error('Too many requests. Please try again later.');
+        }
+        throw new Error(result.detail || 'Failed to send message');
+      }
       
       toast({
         title: "Message sent successfully!",
-        description: "I'll get back to you within 24 hours.",
+        description: result.message || "I'll get back to you within 24 hours.",
       });
 
       // Reset form
@@ -135,9 +150,10 @@ const ContactPage = () => {
       });
       setErrors({});
     } catch (error) {
+      console.error('Error submitting form:', error);
       toast({
         title: "Error sending message",
-        description: "Please try again later or contact me directly.",
+        description: error.message || "Please try again later or contact me directly.",
         variant: "destructive"
       });
     } finally {
