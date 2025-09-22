@@ -20,8 +20,8 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/rupan-dutta-335615185', icon: Linkedin },
-    { name: 'GitHub', href: 'https://github.com/rupandutta', icon: Github },
+    { name: 'LinkedIn', href: personalInfo.linkedin, icon: Linkedin },
+    { name: 'GitHub', href: personalInfo.github, icon: Github },
   ];
 
   return (
