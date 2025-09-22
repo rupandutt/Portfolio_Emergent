@@ -380,9 +380,22 @@ const ContactPage = () => {
                       </div>
                     </div>
 
-                    <button type="submit" className="btn-primary w-full">
-                      <Send size={20} className="mr-2" />
-                      Send Message
+                    <button 
+                      type="submit" 
+                      disabled={isSubmitting}
+                      className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <LoadingSpinner size="sm" className="mr-2" />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          <Send size={20} className="mr-2" />
+                          Send Message
+                        </>
+                      )}
                     </button>
                   </form>
                 </div>
