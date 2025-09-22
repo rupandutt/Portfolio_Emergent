@@ -75,29 +75,6 @@ def check_rate_limit(request: Request, limit: int = 3, window_hours: int = 1) ->
     rate_limit_storage[client_ip].append(current_time)
     return True
 
-# Email sending function
-async def send_email(to_email: str, subject: str, body: str, is_html: bool = False):
-    try:
-        # For production, you can integrate with SendGrid, Mailgun, or similar
-        # For now, we'll use a notification approach that works in development
-        
-        logger.info("=" * 60)
-        logger.info("📧 EMAIL NOTIFICATION")
-        logger.info("=" * 60)
-        logger.info(f"To: {to_email}")
-        logger.info(f"Subject: {subject}")
-        logger.info("-" * 40)
-        logger.info(f"Body:\n{body}")
-        logger.info("=" * 60)
-        
-        # Also try to send a simple notification (could be webhook, Slack, etc.)
-        # For demo purposes, we'll return True to indicate the email was "sent"
-        return True
-        
-    except Exception as e:
-        logger.error(f"Failed to send email: {e}")
-        return False
-
 # Add your routes to the router instead of directly to app
 @api_router.get("/", response_model=dict)
 async def root():
