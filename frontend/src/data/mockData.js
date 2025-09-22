@@ -19,18 +19,19 @@ With hands-on experience in SAP Commerce Cloud (CCV2) and deep knowledge of SAP 
 
 export const skills = {
   primary: [
-    "SAP Commerce Cloud (CCV2)",
-    "SAP Hybris 6.4",
-    "Spartacus Framework",
-    "SAP S/4HANA Integration",
-    "Digital Innovation & Automation"
+    "SAP Commerce Cloud (CCV2) Application Management",
+    "Technical Product Owner & Agile Leadership", 
+    "Application Lifecycle Management",
+    "SAP S/4HANA Functional Integration",
+    "Cross-functional Team Coordination"
   ],
   technical: [
-    "SAP Commerce",
+    "SAP Commerce Cloud (CCV2)",
+    "SAP Hybris 6.4",
     "Agile & Scrum Methodologies", 
     "Test Automation & Regression Testing",
-    "Application Lifecycle Management",
     "Release & Change Management",
+    "Application Organization & Control",
     "ServiceNow",
     "Azure Portal",
     "Java",
@@ -41,12 +42,13 @@ export const skills = {
     "Database Management"
   ],
   softSkills: [
+    "Technical Product Ownership",
+    "Stakeholder Communication & Management",
     "Problem Solving & Decision Making",
     "Analytical Thinking", 
-    "Adaptability",
-    "Collaboration",
-    "Leadership & Ownership",
-    "Stakeholder Communication"
+    "Team Leadership & Mentorship",
+    "Cross-functional Collaboration",
+    "Process Optimization"
   ],
   certifications: [
     {
