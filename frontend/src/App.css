@@ -220,11 +220,34 @@ body {
   animation: fade-in-up 0.6s ease-out;
 }
 
-/* Responsive Design */
-@media (min-width: 768px) {
-  .card-grid-3 {
-    grid-template-columns: repeat(3, 1fr);
-  }
+/* Social Links Hover Effects */
+.social-link {
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  background-color: var(--accent-primary) !important;
+  transform: translateY(-2px);
+}
+
+.social-link:hover svg {
+  color: var(--bg-primary) !important;
+}
+
+/* Input field enhancements */
+.form-input {
+  transition: all 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(218, 255, 1, 0.1);
+}
+
+.form-input.error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
 }
 
 @media (max-width: 768px) {
