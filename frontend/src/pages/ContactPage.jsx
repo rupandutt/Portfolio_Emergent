@@ -326,15 +326,24 @@ const ContactPage = () => {
                         name="subject"
                         value={formData.subject}
                         onChange={handleInputChange}
+                        onBlur={handleBlur}
                         required
-                        className="w-full px-4 py-3 rounded-lg border transition-colors"
+                        className={`w-full px-4 py-3 rounded-lg border transition-colors ${
+                          errors.subject ? 'border-red-500' : 'border-border-primary'
+                        }`}
                         style={{
                           backgroundColor: 'var(--bg-tertiary)',
-                          borderColor: 'var(--border-primary)',
+                          borderColor: errors.subject ? '#ef4444' : 'var(--border-primary)',
                           color: 'var(--text-primary)'
                         }}
                         placeholder="Brief subject of your inquiry"
                       />
+                      {errors.subject && (
+                        <div className="flex items-center space-x-2 mt-1">
+                          <AlertCircle size={14} className="text-red-500" />
+                          <span className="text-sm text-red-500">{errors.subject}</span>
+                        </div>
+                      )}
                     </div>
 
                     <div>
