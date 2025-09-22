@@ -78,15 +78,16 @@ export const experience = [
     position: "IT Service Manager",
     duration: "Feb 2025 - Present",
     location: "Chennai, India",
-    description: "Leading IT service management and strategic guidance for digital transformation initiatives in B2B eCommerce solutions.",
+    description: "Leading IT service management with comprehensive application management, technical product ownership, and strategic guidance for digital transformation initiatives.",
     achievements: [
-      "Provided technical liaison, support, and strategic guidance to process experts",
-      "Served as Technical Product Owner in Agile IT teams, resolving issues and maintaining business alignment",
-      "Defined and implemented test automation strategies for regression testing",
-      "Evaluated and proposed innovative solutions for online shop optimization",
-      "Oversaw validation and deployment of releases, ensuring quality standards and operational readiness"
+      "Application Management: Provided technical liaison, support, and strategic guidance to process experts. Promoted understanding of complex business processes and data structures.",
+      "Application Organization & Control: Collaborated with DBD team and suppliers to align implementations with business goals.",
+      "Technical Product Ownership: Served as Technical Product Owner in an Agile IT team, resolving issues and maintaining alignment with business priorities.",
+      "Regression Test Management: Defined and implemented test automation strategies.",
+      "Innovation & Digitalization: Evaluated and proposed innovative solutions for online shop optimization.",
+      "Release Deployment: Oversaw validation and deployment of releases, ensuring quality standards and operational readiness."
     ],
-    technologies: ["SAP Commerce Cloud", "Agile Methodologies", "Test Automation", "Release Management", "Digital Innovation"]
+    technologies: ["SAP Commerce Cloud", "Agile Methodologies", "Test Automation", "Release Management", "Application Management"]
   },
   {
     id: 2,
@@ -94,15 +95,16 @@ export const experience = [
     position: "Consultant - SAP Commerce",
     duration: "Oct 2023 - Jan 2025",
     location: "Chennai, India",
-    description: "Specialized SAP Commerce consultant focused on release management, quality assurance, and business process optimization.",
+    description: "Specialized SAP Commerce consultant focused on application management, quality assurance, and cross-functional collaboration in agile environments.",
     achievements: [
       "Accepted and validated releases, ensuring adherence to quality standards",
       "Provided expert support to business process experts and stakeholders",
-      "Planned and executed comprehensive knowledge transfer sessions",
-      "Executed configuration adjustments within SAP Commerce Cloud",
-      "Served as primary point of contact for process experts and cross-functional collaboration"
+      "Planned and executed knowledge transfer sessions for team development",
+      "Defined and implemented test automation requirements and strategies",
+      "Executed configuration adjustments within SAP Commerce Cloud platform",
+      "Participated in agile IT teams as primary point of contact for process experts"
     ],
-    technologies: ["SAP Commerce Cloud", "CCV2", "Agile Development", "Quality Assurance", "Business Process Management"]
+    technologies: ["SAP Commerce Cloud", "CCV2", "Agile Development", "Quality Assurance", "Knowledge Transfer"]
   },
   {
     id: 3,
@@ -110,15 +112,15 @@ export const experience = [
     position: "Senior Analyst/Senior Software Engineer",
     duration: "Oct 2022 - Oct 2023", 
     location: "Bangalore, India",
-    description: "Led SAP Hybris CCV2 development, maintenance, and mentoring initiatives for enterprise e-commerce solutions.",
+    description: "Led SAP Hybris CCV2 development, maintenance, and team mentoring initiatives with focus on technical excellence and cross-functional collaboration.",
     achievements: [
-      "Provided live support, development, and maintenance for SAP Hybris CCV2",
+      "Provided live support, development, and maintenance for SAP Hybris CCV2 platform",
+      "Troubleshot and resolved complex technical issues with root cause analysis",
       "Designed and developed new features and enhancements for enterprise clients",
-      "Conducted comprehensive root cause analysis and troubleshooting",
-      "Mentored and coached team members on technical best practices",
-      "Collaborated with cross-functional teams for seamless project delivery"
+      "Mentored and coached team members on technical best practices and methodologies",
+      "Collaborated with cross-functional teams for seamless project delivery and stakeholder management"
     ],
-    technologies: ["SAP Hybris CCV2", "Java", "Database Management", "Technical Leadership", "Cross-functional Collaboration"]
+    technologies: ["SAP Hybris CCV2", "Java", "Database Management", "Technical Leadership", "Team Mentorship"]
   },
   {
     id: 4,
@@ -126,13 +128,13 @@ export const experience = [
     position: "Analyst/Software Engineer",
     duration: "Jun 2021 - Oct 2022",
     location: "Bangalore, India", 
-    description: "Developed and implemented features on SAP Commerce Cloud with focus on platform management and workflow optimization.",
+    description: "Developed and implemented features on SAP Commerce Cloud with comprehensive platform management and workflow optimization capabilities.",
     achievements: [
-      "Worked extensively on SAP Commerce Cloud Version 2 (CCV2) and Hybris 6.4",
-      "Designed and implemented features using various SAP Hybris tools and techniques",
-      "Managed incident and service request workflows using ServiceNow",
-      "Configured and optimized Azure Portal for enhanced system performance",
-      "Collaborated effectively with cross-functional teams for project success"
+      "Worked extensively on SAP Commerce Cloud Version 2 (CCV2) and Hybris 6.4 platforms",
+      "Designed and implemented features using various SAP Hybris tools and advanced techniques",
+      "Utilized SAP Hybris tools for comprehensive platform management and optimization",
+      "Managed incident and service request workflows using ServiceNow for efficient resolution",
+      "Configured Azure Portal for enhanced system performance and user management"
     ],
     technologies: ["SAP Commerce Cloud", "Hybris 6.4", "ServiceNow", "Azure Portal", "Platform Management"]
   },
@@ -142,12 +144,12 @@ export const experience = [
     position: "Analyst/Software Engineer Trainee",
     duration: "Mar 2021 - May 2021",
     location: "Bangalore, India",
-    description: "Comprehensive training program covering full-stack development and SAP Hybris E-Commerce fundamentals.",
+    description: "Comprehensive training program covering full-stack development fundamentals and SAP Hybris E-Commerce platform expertise.",
     achievements: [
-      "Completed intensive training in Java and Spring Framework",
-      "Gained proficiency in frontend technologies: HTML5, CSS3",
-      "Learned REST Web Services development and implementation",
-      "Acquired foundational knowledge in SAP Hybris E-Commerce platform"
+      "Received intensive training in Java programming and Spring Framework development",
+      "Gained proficiency in frontend technologies including HTML5 and CSS3",
+      "Learned REST Web Services development, implementation, and best practices",
+      "Acquired foundational knowledge in SAP Hybris E-Commerce platform and architecture"
     ],
     technologies: ["Java", "Spring Framework", "HTML5", "CSS3", "REST Web Services", "SAP Hybris"]
   }
