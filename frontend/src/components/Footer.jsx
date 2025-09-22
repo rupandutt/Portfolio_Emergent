@@ -19,8 +19,8 @@ const Footer = () => {
       { name: 'Technical Support', href: '/services' },
     ],
     contact: [
-      { name: 'rupan.dutta@email.com', href: 'mailto:rupan.dutta@email.com', icon: Mail },
-      { name: '+91 XXXXX XXXXX', href: 'tel:+91XXXXXXXXX', icon: Phone },
+      { name: 'duttard27@gmail.com', href: 'mailto:duttard27@gmail.com', icon: Mail },
+      { name: '(+91) 8617595261', href: 'tel:+918617595261', icon: Phone },
     ]
   };
 
