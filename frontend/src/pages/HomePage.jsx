@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Download, Star, Users, Zap, Shield } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { personalInfo, skills, testimonials } from '../data/mockData';
+import { personalInfo, skills, recommendations } from '../data/mockData';
 
 const HomePage = () => {
   const handleDownloadResume = () => {
