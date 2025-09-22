@@ -252,6 +252,7 @@ const HomePage = () => {
         </div>
       </section>
 
+      <BackToTop />
       <Footer />
     </div>
   );
