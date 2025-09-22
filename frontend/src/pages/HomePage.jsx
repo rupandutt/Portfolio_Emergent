@@ -8,9 +8,27 @@ import AnimatedCounter from '../components/AnimatedCounter';
 import { personalInfo, skills, recommendations } from '../data/mockData';
 
 const HomePage = () => {
-  const handleDownloadResume = () => {
-    // Mock download functionality
-    alert('Resume download functionality will be implemented with backend');
+  const handleDownloadResume = async () => {
+    try {
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/resume/download`);
+      
+      if (!response.ok) {
+        throw new Error('Failed to download resume');
+      }
+      
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'Rupan_Dutta_Resume.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(url);
+    } catch (error) {
+      console.error('Error downloading resume:', error);
+      alert('Error downloading resume. Please try again later.');
+    }
   };
 
   return (
