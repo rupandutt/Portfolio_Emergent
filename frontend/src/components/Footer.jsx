@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { personalInfo } from '../data/mockData';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
