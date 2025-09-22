@@ -12,12 +12,6 @@ const Footer = () => {
       { name: 'Projects', href: '/projects' },
       { name: 'Contact', href: '/contact' },
     ],
-    expertise: [
-      { name: 'SAP Commerce Cloud Management', href: '/projects' },
-      { name: 'Product Owner & Agile Leadership', href: '/projects' },
-      { name: 'Application Lifecycle Management', href: '/projects' },
-      { name: 'Cross-functional Team Coordination', href: '/projects' },
-    ],
     contact: [
       { name: 'duttard27@gmail.com', href: 'mailto:duttard27@gmail.com', icon: Mail },
       { name: '(+91) 8617595261', href: 'tel:+918617595261', icon: Phone },
