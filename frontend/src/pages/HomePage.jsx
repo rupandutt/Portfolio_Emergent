@@ -68,19 +68,19 @@ const HomePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center feature-card">
               <div className="text-3xl font-bold mb-2" style={{ color: 'var(--accent-primary)' }}>
-                {personalInfo.experience}
+                <AnimatedCounter end={4.8} suffix="+" />
               </div>
               <p className="body-md">Years of Experience</p>
             </div>
             <div className="text-center feature-card">
               <div className="text-3xl font-bold mb-2" style={{ color: 'var(--accent-primary)' }}>
-                20+
+                <AnimatedCounter end={20} suffix="+" />
               </div>
               <p className="body-md">Technologies Mastered</p>
             </div>
             <div className="text-center feature-card">
               <div className="text-3xl font-bold mb-2" style={{ color: 'var(--accent-primary)' }}>
-                2
+                <AnimatedCounter end={2} />
               </div>
               <p className="body-md">Industry Awards Received</p>
             </div>
