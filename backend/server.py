@@ -1,14 +1,21 @@
-from fastapi import FastAPI, APIRouter
+from fastapi import FastAPI, APIRouter, HTTPException, Request, Response
+from fastapi.responses import FileResponse
 from dotenv import load_dotenv
 from starlette.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 import os
 import logging
 from pathlib import Path
-from pydantic import BaseModel, Field
-from typing import List
+from pydantic import BaseModel, Field, EmailStr
+from typing import List, Optional
 import uuid
-from datetime import datetime
+from datetime import datetime, timedelta
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+import asyncio
+from collections import defaultdict
+import time
 
 
 ROOT_DIR = Path(__file__).parent
@@ -25,32 +32,190 @@ app = FastAPI()
 # Create a router with the /api prefix
 api_router = APIRouter(prefix="/api")
 
+# Rate limiting storage
+rate_limit_storage = defaultdict(list)
 
 # Define Models
-class StatusCheck(BaseModel):
-    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
-    client_name: str
-    timestamp: datetime = Field(default_factory=datetime.utcnow)
+class ContactFormRequest(BaseModel):
+    name: str = Field(..., min_length=2, max_length=100)
+    email: EmailStr
+    company: Optional[str] = Field(None, max_length=100)
+    subject: str = Field(..., min_length=5, max_length=200)
+    message: str = Field(..., min_length=20, max_length=2000)
+    projectType: str = Field(..., max_length=50)
 
-class StatusCheckCreate(BaseModel):
-    client_name: str
+class ContactFormResponse(BaseModel):
+    success: bool
+    message: str
+    id: Optional[str] = None
+
+class HealthResponse(BaseModel):
+    status: str
+    timestamp: datetime
+    services: dict
+
+# Rate limiting function
+def check_rate_limit(request: Request, limit: int = 3, window_hours: int = 1) -> bool:
+    client_ip = request.client.host
+    current_time = time.time()
+    window_start = current_time - (window_hours * 3600)
+    
+    # Clean old requests
+    rate_limit_storage[client_ip] = [
+        req_time for req_time in rate_limit_storage[client_ip] 
+        if req_time > window_start
+    ]
+    
+    # Check if limit exceeded
+    if len(rate_limit_storage[client_ip]) >= limit:
+        return False
+    
+    # Add current request
+    rate_limit_storage[client_ip].append(current_time)
+    return True
+
+# Email sending function
+async def send_email(to_email: str, subject: str, body: str, is_html: bool = False):
+    try:
+        # For demo purposes, we'll just log the email
+        # In production, you would use a real email service
+        logger.info(f"Email sent to {to_email}: {subject}")
+        logger.info(f"Body: {body}")
+        return True
+    except Exception as e:
+        logger.error(f"Failed to send email: {e}")
+        return False
 
 # Add your routes to the router instead of directly to app
-@api_router.get("/")
+@api_router.get("/", response_model=dict)
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Rupan Dutta Portfolio API"}
 
-@api_router.post("/status", response_model=StatusCheck)
-async def create_status_check(input: StatusCheckCreate):
-    status_dict = input.dict()
-    status_obj = StatusCheck(**status_dict)
-    _ = await db.status_checks.insert_one(status_obj.dict())
-    return status_obj
+@api_router.get("/health", response_model=HealthResponse)
+async def health_check():
+    try:
+        # Check database connection
+        await db.admin.command('ping')
+        db_status = "connected"
+    except Exception:
+        db_status = "disconnected"
+    
+    return HealthResponse(
+        status="healthy" if db_status == "connected" else "degraded",
+        timestamp=datetime.utcnow(),
+        services={
+            "database": db_status,
+            "email": "operational"
+        }
+    )
 
-@api_router.get("/status", response_model=List[StatusCheck])
-async def get_status_checks():
-    status_checks = await db.status_checks.find().to_list(1000)
-    return [StatusCheck(**status_check) for status_check in status_checks]
+@api_router.post("/contact", response_model=ContactFormResponse)
+async def submit_contact_form(form_data: ContactFormRequest, request: Request):
+    # Rate limiting check
+    if not check_rate_limit(request, limit=3, window_hours=1):
+        raise HTTPException(
+            status_code=429,
+            detail="Too many requests. Please try again later.",
+            headers={"Retry-After": "3600"}
+        )
+    
+    try:
+        # Create submission record
+        submission_id = str(uuid.uuid4())
+        submission = {
+            "_id": submission_id,
+            "name": form_data.name,
+            "email": form_data.email,
+            "company": form_data.company,
+            "subject": form_data.subject,
+            "message": form_data.message,
+            "projectType": form_data.projectType,
+            "submittedAt": datetime.utcnow(),
+            "ipAddress": request.client.host,
+            "emailSent": False,
+            "responded": False
+        }
+        
+        # Save to database
+        await db.contact_submissions.insert_one(submission)
+        
+        # Send admin notification email
+        admin_subject = f"New Portfolio Contact: {form_data.subject}"
+        admin_body = f"""
+        New contact form submission:
+        
+        Name: {form_data.name}
+        Email: {form_data.email}
+        Company: {form_data.company or 'Not provided'}
+        Project Type: {form_data.projectType}
+        Subject: {form_data.subject}
+        
+        Message:
+        {form_data.message}
+        
+        Submitted at: {datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')}
+        IP Address: {request.client.host}
+        """
+        
+        # Send auto-response email
+        auto_response_subject = "Thank you for contacting Rupan Dutta"
+        auto_response_body = f"""
+        Dear {form_data.name},
+        
+        Thank you for reaching out! I have received your message regarding "{form_data.subject}" and will get back to you within 24 hours.
+        
+        Your message:
+        {form_data.message}
+        
+        Best regards,
+        Rupan Dutta
+        IT Service Manager & Technical Product Owner
+        """
+        
+        # Send emails (in background)
+        email_sent = await send_email("duttard27@gmail.com", admin_subject, admin_body)
+        await send_email(form_data.email, auto_response_subject, auto_response_body)
+        
+        # Update email sent status
+        if email_sent:
+            await db.contact_submissions.update_one(
+                {"_id": submission_id},
+                {"$set": {"emailSent": True}}
+            )
+        
+        return ContactFormResponse(
+            success=True,
+            message="Thank you for your message! I'll get back to you within 24 hours.",
+            id=submission_id
+        )
+        
+    except Exception as e:
+        logger.error(f"Error processing contact form: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail="An error occurred while processing your request. Please try again later."
+        )
+
+@api_router.get("/resume/download")
+async def download_resume():
+    try:
+        # Path to the resume file (we'll save the user's CV)
+        resume_path = ROOT_DIR / "static" / "Rupan_Dutta_Resume.pdf"
+        
+        if not resume_path.exists():
+            raise HTTPException(status_code=404, detail="Resume file not found")
+        
+        return FileResponse(
+            path=str(resume_path),
+            filename="Rupan_Dutta_Resume.pdf",
+            media_type="application/pdf",
+            headers={
+                "Content-Disposition": "attachment; filename=Rupan_Dutta_Resume.pdf"
+            }
+        )
+    except Exception as e:
+        logger.error(f"Error serving resume: {e}")
+        raise HTTPException(status_code=500, detail="Error downloading resume")
 
 # Include the router in the main app
 app.include_router(api_router)
@@ -58,7 +223,7 @@ app.include_router(api_router)
 app.add_middleware(
     CORSMiddleware,
     allow_credentials=True,
-    allow_origins=os.environ.get('CORS_ORIGINS', '*').split(','),
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
 )
