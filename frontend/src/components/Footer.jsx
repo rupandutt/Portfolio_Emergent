@@ -40,8 +40,8 @@ const Footer = () => {
               <span style={{ color: 'var(--accent-primary)' }}>Dutta</span>
             </div>
             <p className="body-md max-w-md">
-              Senior SAP Commerce Cloud Consultant specializing in e-commerce solutions, 
-              system integration, and performance optimization for enterprise clients.
+              IT Service Manager & Certified SAP Commerce Consultant specializing in B2B eCommerce solutions, 
+              digital innovation, and cross-functional integration for enterprise clients.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => {
