@@ -72,31 +72,82 @@ export const skills = {
 export const experience = [
   {
     id: 1,
-    company: "Current Organization",
-    position: "Senior Analyst/Software Engineer",
-    duration: "2022 - Present",
-    description: "Specializing in SAP Commerce Cloud (Hybris CCV2) development and e-commerce platform optimization for enterprise clients.",
+    company: "EagleBurgmann KE",
+    position: "IT Service Manager",
+    duration: "Feb 2025 - Present",
+    location: "Chennai, India",
+    description: "Leading IT service management and strategic guidance for digital transformation initiatives in B2B eCommerce solutions.",
     achievements: [
-      "Led SAP Commerce Cloud implementations for major beverage industry clients",
-      "Optimized e-commerce platform performance resulting in improved user experience",
-      "Developed custom solutions using Java and Spartacus framework",
-      "Collaborated with cross-functional teams on omnichannel strategy implementations"
+      "Provided technical liaison, support, and strategic guidance to process experts",
+      "Served as Technical Product Owner in Agile IT teams, resolving issues and maintaining business alignment",
+      "Defined and implemented test automation strategies for regression testing",
+      "Evaluated and proposed innovative solutions for online shop optimization",
+      "Oversaw validation and deployment of releases, ensuring quality standards and operational readiness"
     ],
-    technologies: ["SAP Commerce Cloud", "Java", "Spartacus", "Azure DevOps", "Kibana"]
+    technologies: ["SAP Commerce Cloud", "Agile Methodologies", "Test Automation", "Release Management", "Digital Innovation"]
   },
   {
     id: 2,
-    company: "EagleBurgmann Industries",
-    position: "SAP Commerce Developer",
-    duration: "2021 - 2022",
-    description: "Worked as part of the SAP Commerce practice, developing and maintaining e-commerce solutions.",
+    company: "EagleBurgmann KE",
+    position: "Consultant - SAP Commerce",
+    duration: "Oct 2023 - Jan 2025",
+    location: "Chennai, India",
+    description: "Specialized SAP Commerce consultant focused on release management, quality assurance, and business process optimization.",
     achievements: [
-      "Contributed to multiple SAP Commerce Cloud projects",
-      "Gained expertise in enterprise-level e-commerce development",
-      "Worked with monitoring tools like Dynatrace and New Relic",
-      "Developed proficiency in Impex and SAP Commerce administration"
+      "Accepted and validated releases, ensuring adherence to quality standards",
+      "Provided expert support to business process experts and stakeholders",
+      "Planned and executed comprehensive knowledge transfer sessions",
+      "Executed configuration adjustments within SAP Commerce Cloud",
+      "Served as primary point of contact for process experts and cross-functional collaboration"
     ],
-    technologies: ["SAP Commerce Cloud", "Java", "Dynatrace", "New Relic", "Impex"]
+    technologies: ["SAP Commerce Cloud", "CCV2", "Agile Development", "Quality Assurance", "Business Process Management"]
+  },
+  {
+    id: 3,
+    company: "Capgemini",
+    position: "Senior Analyst/Senior Software Engineer",
+    duration: "Oct 2022 - Oct 2023", 
+    location: "Bangalore, India",
+    description: "Led SAP Hybris CCV2 development, maintenance, and mentoring initiatives for enterprise e-commerce solutions.",
+    achievements: [
+      "Provided live support, development, and maintenance for SAP Hybris CCV2",
+      "Designed and developed new features and enhancements for enterprise clients",
+      "Conducted comprehensive root cause analysis and troubleshooting",
+      "Mentored and coached team members on technical best practices",
+      "Collaborated with cross-functional teams for seamless project delivery"
+    ],
+    technologies: ["SAP Hybris CCV2", "Java", "Database Management", "Technical Leadership", "Cross-functional Collaboration"]
+  },
+  {
+    id: 4,
+    company: "Capgemini",
+    position: "Analyst/Software Engineer",
+    duration: "Jun 2021 - Oct 2022",
+    location: "Bangalore, India", 
+    description: "Developed and implemented features on SAP Commerce Cloud with focus on platform management and workflow optimization.",
+    achievements: [
+      "Worked extensively on SAP Commerce Cloud Version 2 (CCV2) and Hybris 6.4",
+      "Designed and implemented features using various SAP Hybris tools and techniques",
+      "Managed incident and service request workflows using ServiceNow",
+      "Configured and optimized Azure Portal for enhanced system performance",
+      "Collaborated effectively with cross-functional teams for project success"
+    ],
+    technologies: ["SAP Commerce Cloud", "Hybris 6.4", "ServiceNow", "Azure Portal", "Platform Management"]
+  },
+  {
+    id: 5,
+    company: "Capgemini",
+    position: "Analyst/Software Engineer Trainee",
+    duration: "Mar 2021 - May 2021",
+    location: "Bangalore, India",
+    description: "Comprehensive training program covering full-stack development and SAP Hybris E-Commerce fundamentals.",
+    achievements: [
+      "Completed intensive training in Java and Spring Framework",
+      "Gained proficiency in frontend technologies: HTML5, CSS3",
+      "Learned REST Web Services development and implementation",
+      "Acquired foundational knowledge in SAP Hybris E-Commerce platform"
+    ],
+    technologies: ["Java", "Spring Framework", "HTML5", "CSS3", "REST Web Services", "SAP Hybris"]
   }
 ];
 
