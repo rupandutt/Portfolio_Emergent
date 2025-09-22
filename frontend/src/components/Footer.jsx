@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="footer-grid">
+        <div className="footer-grid" style={{ gridTemplateColumns: '2fr 1fr 1fr' }}>
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="text-2xl font-bold">
@@ -60,26 +60,6 @@ const Footer = () => {
             <h4 className="h4 mb-4" style={{ color: 'var(--text-primary)' }}>Navigation</h4>
             <ul className="space-y-3">
               {footerLinks.navigation.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    to={link.href}
-                    className="body-sm transition-colors"
-                    style={{ color: 'var(--text-muted)' }}
-                    onMouseEnter={(e) => e.target.style.color = 'var(--accent-primary)'}
-                    onMouseLeave={(e) => e.target.style.color = 'var(--text-muted)'}
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Expertise Links */}
-          <div>
-            <h4 className="h4 mb-4" style={{ color: 'var(--text-primary)' }}>Expertise</h4>
-            <ul className="space-y-3">
-              {footerLinks.expertise.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
