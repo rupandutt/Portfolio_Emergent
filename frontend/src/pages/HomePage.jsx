@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Download, Star, Users, Zap, Shield } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import BackToTop from '../components/BackToTop';
+import AnimatedCounter from '../components/AnimatedCounter';
 import { personalInfo, skills, recommendations } from '../data/mockData';
 
 const HomePage = () => {
