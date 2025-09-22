@@ -81,11 +81,11 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services Links */}
+          {/* Expertise Links */}
           <div>
-            <h4 className="h4 mb-4" style={{ color: 'var(--text-primary)' }}>Services</h4>
+            <h4 className="h4 mb-4" style={{ color: 'var(--text-primary)' }}>Expertise</h4>
             <ul className="space-y-3">
-              {footerLinks.services.map((link) => (
+              {footerLinks.expertise.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
