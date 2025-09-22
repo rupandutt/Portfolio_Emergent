@@ -19,6 +19,24 @@ const HomePage = () => {
       <section className="pt-32 pb-20 px-4">
         <div className="container">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            {/* Professional Photo */}
+            <div className="mb-8 flex justify-center">
+              <div className="relative">
+                <img 
+                  src={personalInfo.profileImage}
+                  alt={personalInfo.name}
+                  className="w-32 h-32 rounded-full object-cover border-4 shadow-lg"
+                  style={{ borderColor: 'var(--accent-primary)' }}
+                />
+                <div 
+                  className="absolute inset-0 rounded-full opacity-20"
+                  style={{ 
+                    background: 'linear-gradient(135deg, var(--accent-primary) 0%, transparent 70%)'
+                  }}
+                ></div>
+              </div>
+            </div>
+            
             <h1 className="display-lg mb-6" style={{ color: 'var(--text-primary)' }}>
               {personalInfo.name}
             </h1>
