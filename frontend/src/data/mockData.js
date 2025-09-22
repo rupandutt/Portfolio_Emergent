@@ -19,31 +19,53 @@ Currently serving as IT Service Manager, I provide technical liaison, support, a
 
 export const skills = {
   primary: [
-    "SAP Commerce Cloud (Hybris CCV2)",
-    "Java Development",
+    "SAP Commerce Cloud (CCV2)",
+    "SAP Hybris 6.4",
     "Spartacus Framework",
-    "E-commerce Platform Development",
-    "Omnichannel Strategy"
+    "SAP S/4HANA Integration",
+    "Digital Innovation & Automation"
   ],
   technical: [
-    "Azure AD Portal",
+    "SAP Commerce",
+    "Agile & Scrum Methodologies", 
+    "Test Automation & Regression Testing",
+    "Application Lifecycle Management",
+    "Release & Change Management",
     "ServiceNow",
-    "Azure DevOps",
-    "Kibana",
-    "Dynatrace",
-    "Loggly",
-    "New Relic",
-    "SAP Commerce Cloud Portal",
-    "SAP One Launchpad",
-    "Git",
+    "Azure Portal",
+    "Java",
+    "Spring Framework",
     "HTML5",
     "CSS3",
-    "OpenSearch Dashboard",
-    "Impex"
+    "REST Web Services",
+    "Database Management"
+  ],
+  softSkills: [
+    "Problem Solving & Decision Making",
+    "Analytical Thinking", 
+    "Adaptability",
+    "Collaboration",
+    "Leadership & Ownership",
+    "Stakeholder Communication"
   ],
   certifications: [
-    "SAP Certified Application Associate - SAP Commerce Cloud Business User",
-    "SAP Certified Development Professional - SAP Commerce Cloud 1905 Developer"
+    {
+      name: "SAP Certified Application Associate - SAP Commerce Cloud Business User",
+      date: "14/06/2022 - 16/04/2023"
+    },
+    {
+      name: "SAP Certified Development Professional - SAP Commerce Cloud 1905 Developer", 
+      date: "07/2021 - 16/04/2023"
+    },
+    {
+      name: "Managing Products in the Backoffice Product Cockpit by SAP",
+      date: "15/03/2025"
+    },
+    {
+      name: "Agile Software Development - University of Minnesota",
+      date: "02/2022",
+      provider: "Coursera"
+    }
   ]
 };
 
