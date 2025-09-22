@@ -94,23 +94,23 @@ const HomePage = () => {
               Core Expertise
             </h2>
             <p className="body-lg max-w-2xl mx-auto">
-              Specialized in SAP Commerce Cloud development with deep expertise in enterprise e-commerce solutions
+              Technical Product Owner and Application Manager specialized in SAP Commerce Cloud with extensive Agile leadership experience
             </p>
           </div>
           
           <div className="card-grid-3 max-w-6xl mx-auto">
             <div className="feature-card">
               <div className="mb-4">
-                <Zap size={48} style={{ color: 'var(--accent-primary)' }} />
+                <Users size={48} style={{ color: 'var(--accent-primary)' }} />
               </div>
               <h3 className="h3 mb-4" style={{ color: 'var(--text-primary)' }}>
-                SAP Commerce Cloud
+                Technical Product Owner
               </h3>
               <p className="body-md mb-4">
-                Expert in Hybris CCV2 development, implementation, and optimization for enterprise-level e-commerce platforms.
+                Agile IT team leadership with focus on issue resolution, business priority alignment, and cross-functional coordination.
               </p>
               <div className="flex flex-wrap gap-2">
-                {skills.primary.slice(0, 3).map((skill, index) => (
+                {skills.primary.slice(1, 3).map((skill, index) => (
                   <span 
                     key={index} 
                     className="px-3 py-1 text-sm rounded-lg"
@@ -127,16 +127,16 @@ const HomePage = () => {
 
             <div className="feature-card">
               <div className="mb-4">
-                <Users size={48} style={{ color: 'var(--accent-primary)' }} />
+                <Zap size={48} style={{ color: 'var(--accent-primary)' }} />
               </div>
               <h3 className="h3 mb-4" style={{ color: 'var(--text-primary)' }}>
-                System Integration
+                SAP Commerce Management
               </h3>
               <p className="body-md mb-4">
-                Seamless integration of enterprise systems including Azure AD, ServiceNow, and monitoring platforms.
+                Comprehensive application management, configuration adjustments, and platform optimization for SAP Commerce Cloud.
               </p>
               <div className="flex flex-wrap gap-2">
-                {skills.technical.slice(0, 3).map((skill, index) => (
+                {['SAP Commerce Cloud', 'Application Management', 'CCV2'].map((skill, index) => (
                   <span 
                     key={index} 
                     className="px-3 py-1 text-sm rounded-lg"
@@ -156,13 +156,13 @@ const HomePage = () => {
                 <Shield size={48} style={{ color: 'var(--accent-primary)' }} />
               </div>
               <h3 className="h3 mb-4" style={{ color: 'var(--text-primary)' }}>
-                Performance Optimization
+                Process Optimization
               </h3>
               <p className="body-md mb-4">
-                Advanced monitoring and optimization using Dynatrace, New Relic, and Kibana for peak performance.
+                Test automation strategies, release management, and quality assurance for operational readiness and deployment.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['Dynatrace', 'New Relic', 'Kibana'].map((skill, index) => (
+                {['Test Automation', 'Release Management', 'Quality Assurance'].map((skill, index) => (
                   <span 
                     key={index} 
                     className="px-3 py-1 text-sm rounded-lg"
