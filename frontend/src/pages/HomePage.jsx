@@ -232,18 +232,18 @@ const HomePage = () => {
             }}
           >
             <h2 className="display-sm mb-6" style={{ color: 'var(--text-primary)' }}>
-              Ready to Transform Your E-commerce Platform?
+              Looking for a Technical Product Owner?
             </h2>
             <p className="body-lg mb-8 max-w-2xl mx-auto">
-              Let's discuss how my SAP Commerce Cloud expertise can help accelerate your digital transformation journey.
+              Experienced in SAP Commerce Cloud application management, agile leadership, and cross-functional team coordination. Let's discuss how I can contribute to your team.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link to="/contact" className="btn-primary">
-                Start Your Project
+                Get in Touch
                 <ArrowRight size={20} className="ml-2" />
               </Link>
               <Link to="/projects" className="btn-secondary">
-                View My Work
+                View My Experience
               </Link>
             </div>
           </div>
