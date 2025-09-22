@@ -143,23 +143,17 @@ const AboutPage = () => {
             </h2>
             
             <div className="space-y-12">
-              {/* Primary Skills */}
+              {/* Core Skills with Progress */}
               <div className="feature-card">
                 <h3 className="h3 mb-6" style={{ color: 'var(--text-primary)' }}>
                   Core SAP Commerce Skills
                 </h3>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {skills.primary.map((skill, index) => (
-                    <div key={index} className="flex items-center space-x-3">
-                      <span 
-                        className="w-3 h-3 rounded-full"
-                        style={{ backgroundColor: 'var(--accent-primary)' }}
-                      ></span>
-                      <span className="body-md" style={{ color: 'var(--text-secondary)' }}>
-                        {skill}
-                      </span>
-                    </div>
-                  ))}
+                <div className="space-y-4">
+                  <SkillProgress skill="SAP Commerce Cloud (CCV2)" level={95} delay={0} />
+                  <SkillProgress skill="Technical Product Ownership" level={90} delay={200} />
+                  <SkillProgress skill="Application Lifecycle Management" level={88} delay={400} />
+                  <SkillProgress skill="Agile & Scrum Leadership" level={92} delay={600} />
+                  <SkillProgress skill="Cross-functional Coordination" level={85} delay={800} />
                 </div>
               </div>
 
