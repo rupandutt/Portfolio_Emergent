@@ -14,8 +14,17 @@ class EmailService:
         self.smtp_server = "smtp.gmail.com"
         self.smtp_port = 587
         self.sender_email = "duttard27@gmail.com"
-        # You can set this via environment variable for security
-        self.sender_password = os.environ.get('GMAIL_APP_PASSWORD', 'your_app_password_here')
+        # Get password from environment variable
+        self.sender_password = os.environ.get('GMAIL_APP_PASSWORD', '')
+        
+        if not self.sender_password or self.sender_password == 'your_16_character_app_password_here':
+            logger.warning("⚠️  Gmail App Password not configured properly!")
+            logger.warning("📧 Emails will be logged instead of sent")
+            logger.warning("💡 To fix: Set GMAIL_APP_PASSWORD in /app/backend/.env")
+            self.use_smtp = False
+        else:
+            logger.info("✅ Gmail SMTP configured successfully")
+            self.use_smtp = True
         
     async def send_notification_email(self, form_data: dict, client_ip: str):
         """Send notification email to the portfolio owner"""
