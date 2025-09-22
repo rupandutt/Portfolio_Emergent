@@ -158,86 +158,86 @@ export const experience = [
 export const projects = [
   {
     id: 1,
-    title: "EagleBurgmann B2B eCommerce Platform Optimization",
-    category: "SAP Commerce Cloud Implementation",
-    description: "Led comprehensive digital transformation and optimization of B2B eCommerce platform with focus on SAP S/4HANA integration and performance enhancement.",
-    overview: "Strategic optimization of EagleBurgmann's B2B eCommerce platform featuring advanced system integration, automated processes, and enhanced user experience for industrial equipment solutions.",
+    title: "SAP Commerce Cloud Application Management & Technical Product Ownership",
+    category: "Application Management",
+    description: "Comprehensive application management and technical product ownership for SAP Commerce Cloud platform with focus on cross-functional team coordination and agile methodology implementation.",
+    overview: "Strategic application management initiative involving technical product ownership in agile IT teams, providing liaison support to process experts and ensuring alignment with business priorities at EagleBurgmann.",
     challenges: [
-      "Complex B2B product catalog with technical specifications",
-      "Integration with SAP S/4HANA for real-time data synchronization",
-      "Performance optimization for industrial equipment search and configuration",
-      "Cross-functional process automation and workflow optimization"
+      "Complex business process understanding and data structure promotion",
+      "Cross-functional team coordination and stakeholder management",
+      "Alignment of technical implementations with evolving business goals",
+      "Continuous issue resolution while maintaining business priorities"
     ],
     solutions: [
-      "Implemented SAP Commerce Cloud CCV2 with custom B2B functionalities",
-      "Developed seamless SAP S/4HANA integration for inventory and pricing",
-      "Created automated test strategies for regression testing",
-      "Designed and implemented innovative solutions for online shop optimization"
+      "Served as Technical Product Owner in Agile IT team environment",
+      "Provided technical liaison, support, and strategic guidance to process experts",
+      "Collaborated with DBD team and suppliers for business goal alignment",
+      "Promoted understanding of complex business processes and data structures"
     ],
     results: [
-      "Enhanced system performance and user experience",
-      "Streamlined cross-functional business processes",
-      "Successful implementation of test automation strategies",
-      "Improved operational readiness and release deployment efficiency"
+      "Enhanced cross-functional team coordination and communication",
+      "Improved alignment between technical implementations and business objectives",
+      "Streamlined issue resolution processes with business priority maintenance",
+      "Successful strategic guidance implementation for process experts"
     ],
-    technologies: ["SAP Commerce Cloud", "SAP S/4HANA", "CCV2", "Test Automation", "Agile Methodologies"],
-    duration: "18 months",
+    technologies: ["SAP Commerce Cloud", "Agile Methodologies", "Technical Product Ownership", "Cross-functional Coordination"],
+    duration: "Ongoing",
     image: "/api/placeholder/600/400"
   },
   {
     id: 2,
-    title: "Enterprise SAP Commerce Cloud Migration & Enhancement",
-    category: "System Integration",
-    description: "Comprehensive migration and enhancement project for enterprise client involving SAP Hybris CCV2 development and cross-functional collaboration.",
-    overview: "Large-scale enterprise migration from legacy systems to SAP Commerce Cloud with focus on performance optimization, feature development, and team mentorship.",
+    title: "Test Automation Strategy Implementation & Release Management",
+    category: "Process Optimization",
+    description: "Comprehensive test automation strategy definition and implementation with focus on regression testing and release deployment optimization.",
+    overview: "Strategic initiative to enhance quality assurance processes through test automation implementation and comprehensive release management optimization for SAP Commerce Cloud platform.",
     challenges: [
-      "Legacy system migration with minimal downtime",
-      "Complex enterprise-level requirements and customizations",
-      "Cross-functional team coordination and knowledge transfer",
-      "Performance optimization for high-volume transactions"
+      "Manual testing processes affecting release cycle efficiency",
+      "Complex release validation and quality assurance requirements",
+      "Need for comprehensive test automation strategy development",
+      "Operational readiness validation for release deployments"
     ],
     solutions: [
-      "Executed comprehensive SAP Hybris CCV2 development and maintenance",
-      "Designed and implemented new features and enhancements",
-      "Conducted root cause analysis and technical troubleshooting",
-      "Mentored team members and facilitated knowledge transfer sessions"
+      "Defined and implemented comprehensive test automation strategies",
+      "Established regression test management processes and frameworks",
+      "Oversaw validation and deployment of releases with quality standards",
+      "Implemented change and release management protocols"
     ],
     results: [
-      "Successful enterprise platform migration with zero downtime",
-      "Improved system performance and reliability",
-      "Enhanced team capabilities through mentorship and training",
-      "Streamlined development and deployment processes"
+      "Significant improvement in release cycle efficiency and quality",
+      "Enhanced operational readiness and deployment success rates",
+      "Streamlined regression testing processes with automation",
+      "Established robust quality standards for release validation"
     ],
-    technologies: ["SAP Hybris CCV2", "Java", "ServiceNow", "Azure Portal", "Database Management"],
+    technologies: ["Test Automation", "Regression Testing", "Release Management", "Quality Assurance", "SAP Commerce Cloud"],
     duration: "12 months",
     image: "/api/placeholder/600/400"
   },
   {
     id: 3,
-    title: "Agile Development & Release Management Optimization",
-    category: "Performance Enhancement",
-    description: "Implementation of comprehensive agile development practices and release management optimization for SAP Commerce Cloud projects.",
-    overview: "Strategic initiative to optimize development workflows, implement test automation, and enhance release management processes across multiple SAP Commerce projects.",
+    title: "Innovation & Digital Shop Optimization Initiative",
+    category: "Digital Innovation",
+    description: "Strategic evaluation and proposal of innovative solutions for online shop optimization with focus on digital transformation and process enhancement.",
+    overview: "Comprehensive digital innovation initiative focused on evaluating and proposing innovative solutions for online shop optimization and digital transformation enhancement.",
     challenges: [
-      "Manual testing processes leading to extended release cycles",
-      "Complex release validation and deployment procedures",
-      "Need for improved quality assurance and validation processes",
-      "Cross-functional coordination and communication gaps"
+      "Identification of optimization opportunities in existing online shop infrastructure",
+      "Evaluation of innovative solutions for digital transformation",
+      "Integration of new technologies with existing business processes",
+      "Strategic planning for digital innovation implementation"
     ],
     solutions: [
-      "Defined and implemented comprehensive test automation strategies",
-      "Established quality standards and release validation processes",
-      "Implemented agile methodologies and cross-functional collaboration",
-      "Created automated release deployment and validation frameworks"
+      "Evaluated and proposed innovative solutions for online shop optimization",
+      "Conducted comprehensive analysis of digital transformation opportunities",
+      "Developed strategic recommendations for process enhancement",
+      "Implemented digitalization initiatives with business process integration"
     ],
     results: [
-      "50% reduction in release cycle time",
-      "Improved quality standards and reduced post-deployment issues",
-      "Enhanced cross-functional team collaboration and communication",
-      "Established scalable frameworks for future development projects"
+      "Successful identification and proposal of innovative optimization solutions",
+      "Enhanced digital transformation strategy and implementation roadmap",
+      "Improved online shop performance and user experience optimization",
+      "Strategic innovation framework establishment for future initiatives"
     ],
-    technologies: ["Agile Methodologies", "Test Automation", "Release Management", "Quality Assurance", "CI/CD"],
-    duration: "8 months", 
+    technologies: ["Digital Innovation", "Process Optimization", "Strategic Planning", "SAP Commerce Cloud"],
+    duration: "6 months",
     image: "/api/placeholder/600/400"
   }
 ];
