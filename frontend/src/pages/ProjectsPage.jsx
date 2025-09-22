@@ -271,6 +271,7 @@ const ProjectsPage = () => {
         </div>
       )}
 
+      <BackToTop />
       <Footer />
     </div>
   );
