@@ -2,6 +2,9 @@ import React from 'react';
 import { Download, Award, MapPin, Calendar } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import BackToTop from '../components/BackToTop';
+import SkillProgress from '../components/SkillProgress';
+import AvailabilityStatus from '../components/AvailabilityStatus';
 import { personalInfo, skills, experience, education, honorsAwards, recommendations } from '../data/mockData';
 
 const AboutPage = () => {
