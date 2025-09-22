@@ -189,6 +189,17 @@ Phone: +91 8617595261
     async def _send_email_smtp(self, to_email: str, subject: str, text_body: str, html_body: str = None):
         """Send email using SMTP"""
         try:
+            # If SMTP not configured, just log the email
+            if not self.use_smtp:
+                logger.info("=" * 80)
+                logger.info("📧 EMAIL LOGGED (SMTP not configured)")
+                logger.info("=" * 80)
+                logger.info(f"To: {to_email}")
+                logger.info(f"Subject: {subject}")
+                logger.info("💡 Configure GMAIL_APP_PASSWORD to send real emails")
+                logger.info("=" * 80)
+                return True
+            
             # Create message
             msg = MIMEMultipart('alternative')
             msg['Subject'] = subject
@@ -225,6 +236,7 @@ Phone: +91 8617595261
         except smtplib.SMTPAuthenticationError as e:
             logger.error(f"❌ SMTP Authentication failed. Please check email credentials: {e}")
             logger.error("💡 TIP: Use Gmail App Password, not your regular password")
+            logger.error("🔗 Setup guide: https://support.google.com/mail/answer/185833")
             return False
         except smtplib.SMTPException as e:
             logger.error(f"❌ SMTP Error: {e}")
