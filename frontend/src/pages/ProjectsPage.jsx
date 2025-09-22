@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ExternalLink, Calendar, Users, ArrowRight } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import BackToTop from '../components/BackToTop';
 import { projects } from '../data/mockData';
 
 const ProjectsPage = () => {
