@@ -1,8 +1,8 @@
 // Updated data from CV for portfolio website
 export const personalInfo = {
   name: "Rupan Dutta",
-  title: "IT Service Manager",
-  tagline: "Certified SAP Commerce Consultant & Digital Innovation Specialist",
+  title: "IT Service Manager & Technical Product Owner",
+  tagline: "SAP Commerce Cloud Application Management & Agile Project Leadership",
   email: "duttard27@gmail.com",
   phone: "(+91) 8617595261",
   linkedin: "https://www.linkedin.com/in/rupan-dutta-335615185",
@@ -10,11 +10,11 @@ export const personalInfo = {
   location: "Chennai, India",
   experience: "4.8+ years",
   profileImage: "https://customer-assets.emergentagent.com/job_tech-portfolio-170/artifacts/ihounuhx_IMG_6056.jpeg",
-  bio: `As a Certified SAP Commerce Consultant at EagleBurgmann, I specialize in building and optimizing robust B2B eCommerce solutions. My focus is on enhancing system performance, automating key processes, and ensuring seamless cross-functional integration with platforms like SAP S/4HANA.
+  bio: `IT Service Manager and Technical Product Owner with extensive experience in SAP Commerce Cloud application management and Agile project leadership. Specialized in application lifecycle management, cross-functional team coordination, and strategic guidance for digital transformation initiatives.
 
-With hands-on experience in SAP Commerce Cloud (CCV2) and Spartacus, I enjoy solving complex technical challenges and collaborating with global teams to deliver tangible business value. I am passionate about creating efficient, scalable systems that drive digital growth.
+Currently serving as Technical Product Owner in Agile IT teams at EagleBurgmann, providing technical liaison and support to process experts while promoting understanding of complex business processes and data structures. My focus is on enhancing system performance, automating key processes, and ensuring seamless operational readiness.
 
-Currently serving as IT Service Manager, I provide technical liaison, support, and strategic guidance while promoting understanding of complex business processes and data structures.`
+With hands-on experience in SAP Commerce Cloud (CCV2) and deep knowledge of SAP S/4HANA functional areas, I excel in resolving technical issues, implementing test automation strategies, and overseeing validation and deployment of releases to ensure quality standards.`
 };
 
 export const skills = {
