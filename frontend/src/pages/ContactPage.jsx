@@ -492,6 +492,7 @@ const ContactPage = () => {
         </div>
       </section>
 
+      <BackToTop />
       <Footer />
     </div>
   );
