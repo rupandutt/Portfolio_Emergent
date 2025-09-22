@@ -8,7 +8,7 @@ const ProjectsPage = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [filter, setFilter] = useState('All');
 
-  const categories = ['All', 'SAP Commerce Cloud Implementation', 'System Integration', 'Performance Enhancement'];
+  const categories = ['All', 'Application Management', 'Process Optimization', 'Digital Innovation'];
 
   const filteredProjects = filter === 'All' 
     ? projects 
