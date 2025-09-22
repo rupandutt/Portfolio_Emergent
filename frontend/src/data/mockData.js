@@ -372,7 +372,7 @@ export const recommendations = [
     name: "Vanessa Siemon",
     position: "Solution Architect SAP Commerce",
     company: "Klueber GmbH",
-    content: "Rupan consistently demonstrates exceptional technical skills and problem-solving abilities in SAP Commerce Cloud implementations. His analytical thinking and collaborative approach make him a valuable team member who delivers high-quality results.",
+    content: "Rupan is a very ambitious and teachable consultant for operating SAP Commerce. With a sense of depth for details and a constructive communication capability for root causes, he was quickly able to take accountability for communication with the core organization and organization of a multifunctional IT team.",
     date: "2024"
   },
   {
@@ -380,7 +380,7 @@ export const recommendations = [
     name: "Ravi Iyer", 
     position: "Associate Director",
     company: "Capgemini Australia",
-    content: "Working with Rupan has been a pleasure. His deep understanding of SAP Commerce Cloud, combined with his excellent communication skills and adaptability, makes him stand out as a professional. He consistently delivers beyond expectations.",
+    content: "I have worked closely with Rupan for one of our clients in Australia. Rupan comes across as a highly mature individual - managing project delivery, customer expectations, stakeholder management, excellent communication skills and containing client escalations. Rupan exerted due diligence on all his interactions, on the various customer Project deliverables including managing the tight rope between delivery led projects and BAU. His flexibility in accommodating various facets of issue resolution is fantastic. His technical skills on multiple CRM domain applications like SAP Hybris is highly commendable.",
     date: "2023"
   },
   {
@@ -388,7 +388,7 @@ export const recommendations = [
     name: "Sudeep Bansal",
     position: "Senior IT Engineer", 
     company: "Honeywell",
-    content: "Rupan's leadership qualities and technical ownership in SAP Commerce projects are commendable. His ability to collaborate effectively with stakeholders while maintaining high standards of quality makes him an asset to any organization.",
+    content: "Rupan is an exceptionally hardworking and technically proficient professional with deep expertise in SAP Commerce Cloud. He has a strong problem-solving mindset and consistently delivers high-quality results, making him a valuable asset to any team. His ability to learn and adapt quickly, coupled with his collaborative nature, ensures that he excels in every task. I highly recommend Rupan for any role that requires a combination of strong technical skills, smart decision-making, and dedication to excellence.",
     date: "2023"
   }
 ];
