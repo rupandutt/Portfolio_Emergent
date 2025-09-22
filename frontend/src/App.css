@@ -220,6 +220,13 @@ body {
   animation: fade-in-up 0.6s ease-out;
 }
 
+/* Responsive Design */
+@media (min-width: 768px) {
+  .card-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* Social Links Hover Effects */
 .social-link {
   transition: all 0.2s ease;
